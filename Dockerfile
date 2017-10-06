@@ -1,4 +1,5 @@
-FROM circleci/php:7.1.9
+FROM circleci/php:7.1.9-apache-browsers
+RUN docker-php-ext-install pdo pdo_mysql
 # Add the Cloud SDK distribution URI as a package source
 RUN sudo apt-get update
 RUN sudo apt-get install lsb-core
